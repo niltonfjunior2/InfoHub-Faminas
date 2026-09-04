@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="faminas-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1B29" />
+      <stop offset="100%" stop-color="#005691" />
+    </linearGradient>
+    <linearGradient id="cyan-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A3E0" />
+      <stop offset="100%" stop-color="#0072CE" />
+    </linearGradient>
+  </defs>
+  <!-- Background Container -->
+  <rect width="512" height="512" rx="112" fill="url(#faminas-grad)" />
+  <rect x="24" y="24" width="464" height="464" rx="96" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="6" />
+  
+  <!-- Stylized F / Hub Icon -->
+  <path d="M160 140 H352 V204 H232 V244 H320 V304 H232 V372 H160 Z" fill="#FFFFFF" />
+  <circle cx="340" cy="372" r="32" fill="url(#cyan-accent)" />
+  
+  <!-- Subtle Grid Accent -->
+  <circle cx="160" cy="140" r="8" fill="#00A3E0" />
+  <circle cx="352" cy="140" r="8" fill="#00A3E0" />
+</svg>

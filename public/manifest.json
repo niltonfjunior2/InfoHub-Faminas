@@ -1,0 +1,32 @@
+{
+  "name": "InfoHub FAMINAS — Central de Autoatendimento",
+  "short_name": "InfoHub FAMINAS",
+  "description": "Central institucional de autoatendimento acadêmico para 15 setores da FAMINAS, desenvolvida no projeto de extensão curricular de ADS.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "#0B1B29",
+  "theme_color": "#0B1B29",
+  "orientation": "portrait-primary",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-faminas.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+/* Design Tokens - Identidade Institucional FAMINAS / EducaHub */
+:root {
+  /* Cores Primárias e Institucionais */
+  --color-primary-navy: #0B1B29;
+  --color-primary-navy-light: #132A3E;
+  --color-primary-blue: #005691;
+  --color-primary-accent: #0072CE;
+  --color-cyan-faminas: #00A3E0;
+  --color-cyan-faminas-soft: rgba(0, 163, 224, 0.12);
+
+  /* Neutros e Superfícies */
+  --color-bg-page: #F8F9FA;
+  --color-bg-card: #FFFFFF;
+  --color-bg-surface: #F1F5F9;
+  --color-bg-subtle: #E9ECEF;
+  --color-border: #E2E8F0;
+  --color-border-hover: #CBD5E1;
+
+  /* Tipografia e Textos */
+  --color-text-main: #1E293B;
+  --color-text-muted: #64748B;
+  --color-text-light: #94A3B8;
+  --color-text-inverse: #FFFFFF;
+  --color-text-inverse-muted: #CBD5E1;
+
+  /* Status e Alertas */
+  --color-status-active: #10B981;
+  --color-status-active-bg: rgba(16, 185, 129, 0.12);
+  --color-status-pending: #F59E0B;
+  --color-status-pending-bg: rgba(245, 158, 11, 0.12);
+
+  /* Tipografia */
+  --font-family-base: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-heading: 'Montserrat', 'Red Hat Display', sans-serif;
+
+  /* Dimensões, Espaçamentos e Raios */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(11, 27, 41, 0.05);
+  --shadow-card: 0 4px 6px -1px rgba(11, 27, 41, 0.06), 0 2px 4px -2px rgba(11, 27, 41, 0.04);
+  --shadow-hover: 0 12px 20px -3px rgba(11, 27, 41, 0.12), 0 4px 6px -4px rgba(11, 27, 41, 0.08);
+  --shadow-header: 0 2px 10px rgba(11, 27, 41, 0.08);
+
+  /* Transições */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --max-width: 1280px;
+}
