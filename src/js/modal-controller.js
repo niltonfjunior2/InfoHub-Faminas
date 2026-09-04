@@ -78,6 +78,31 @@ const MODAL_TEMPLATES = {
         Dúvidas sobre o tratamento de dados institucionais na FAMINAS podem ser direcionadas aos canais oficiais da instituição ou à coordenação do curso de Análise e Desenvolvimento de Sistemas.
       </p>
     `
+  },
+  pwa_instructions: {
+    title: 'Instalação do InfoHub FAMINAS',
+    icon: 'install_mobile',
+    body: `
+      <h3>Tenha o InfoHub sempre à mão no seu aparelho</h3>
+      <p>
+        O <strong>InfoHub FAMINAS</strong> é um aplicativo web progressivo (PWA) e pode ser adicionado à tela inicial do seu celular ou computador sem ocupar espaço da memória e com carregamento instantâneo.
+      </p>
+
+      <div class="modal-highlight-box">
+        <strong>No Smartphone Android (Google Chrome):</strong><br>
+        Toque no menu de três pontos (⋮) no canto superior direito do navegador e selecione a opção <em>"Instalar aplicativo"</em> ou <em>"Adicionar à tela inicial"</em>.
+      </div>
+
+      <div class="modal-highlight-box">
+        <strong>No iPhone / iPad (Safari iOS):</strong><br>
+        Toque no ícone de compartilhamento (quadrado com seta apontando para cima) na barra inferior e selecione <em>"Adicionar à Tela de Início"</em>.
+      </div>
+
+      <div class="modal-highlight-box">
+        <strong>No Computador (Chrome / Edge):</strong><br>
+        Clique no ícone de instalação localizado na barra de endereços (ao lado do botão de favoritos) e confirme em <em>"Instalar"</em>.
+      </div>
+    `
   }
 };
 

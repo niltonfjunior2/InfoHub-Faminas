@@ -49,16 +49,15 @@
       </div>
 
       <div class="header-actions">
-        <button type="button" class="btn btn-outline-light btn-install" id="btn-install-pwa" style="display: none;"
-          aria-label="Instalar o aplicativo InfoHub FAMINAS no dispositivo" title="Instalar aplicativo">
-          <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
-          <span class="btn-text-label">Instalar App</span>
-        </button>
-        <a href="https://www.unifaminas.edu.br/principal" target="_blank" rel="noopener noreferrer"
-          class="btn btn-primary-highlight btn-portal" id="link-portal-unifaminas"
-          aria-label="Acessar o portal oficial FAMINAS em nova janela">
-          <span class="btn-text-full">Portal FAMINAS</span>
-          <span class="btn-text-short">Portal</span>
+        <a 
+          href="https://www.unifaminas.edu.br/principal" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn btn-primary-highlight btn-portal" 
+          id="link-portal-unifaminas"
+          aria-label="Acessar o portal oficial FAMINAS em nova janela"
+        >
+          <span>Portal FAMINAS</span>
           <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
         </a>
       </div>
@@ -90,10 +89,16 @@
             <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
             <span>Autoatendimento 24/7</span>
           </div>
-          <div class="hero-badge-item">
-            <span class="material-symbols-outlined" aria-hidden="true">devices</span>
-            <span>PWA Mobile-First</span>
-          </div>
+          <button 
+            type="button" 
+            class="hero-badge-item hero-badge-install" 
+            id="btn-install-pwa" 
+            aria-label="Instalar o aplicativo InfoHub FAMINAS no dispositivo"
+            title="Instalar aplicativo InfoHub FAMINAS"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+            <span>Instalar App</span>
+          </button>
         </div>
       </div>
     </section>

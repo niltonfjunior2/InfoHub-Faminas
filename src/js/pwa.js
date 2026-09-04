@@ -3,6 +3,8 @@
  * Registro do Service Worker e controle do fluxo de instalação nativa.
  */
 
+import { openModal } from './modal-controller.js';
+
 let deferredInstallPrompt = null;
 
 /**
@@ -24,45 +26,45 @@ function registerServiceWorker() {
 }
 
 /**
- * Configura o botão de instalação nativa
+ * Configura o badge de instalação na seção hero
  */
 function setupInstallPrompt() {
   const installBtn = document.getElementById('btn-install-pwa');
+  if (!installBtn) return;
 
   window.addEventListener('beforeinstallprompt', (event) => {
-    // Impede a barra padrão do Chrome em mobile para usar nosso botão institucional
     event.preventDefault();
     deferredInstallPrompt = event;
+    console.log('[InfoHub PWA] Evento beforeinstallprompt capturado com sucesso.');
+  });
 
-    if (installBtn) {
-      installBtn.style.display = 'inline-flex';
-      installBtn.setAttribute('aria-hidden', 'false');
+  installBtn.addEventListener('click', async () => {
+    if (deferredInstallPrompt) {
+      deferredInstallPrompt.prompt();
+      const choiceResult = await deferredInstallPrompt.userChoice;
 
-      installBtn.addEventListener('click', async () => {
-        if (!deferredInstallPrompt) return;
-
-        deferredInstallPrompt.prompt();
-        const choiceResult = await deferredInstallPrompt.userChoice;
-
-        if (choiceResult.outcome === 'accepted') {
-          console.log('[InfoHub PWA] Usuário aceitou a instalação do app.');
-        } else {
-          console.log('[InfoHub PWA] Usuário recusou a instalação.');
-        }
-
-        deferredInstallPrompt = null;
-        installBtn.style.display = 'none';
-        installBtn.setAttribute('aria-hidden', 'true');
-      });
+      if (choiceResult.outcome === 'accepted') {
+        console.log('[InfoHub PWA] Usuário aceitou a instalação do app.');
+        installBtn.innerHTML = `
+          <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+          <span>App Instalado</span>
+        `;
+        installBtn.classList.add('is-installed');
+      }
+      deferredInstallPrompt = null;
+    } else {
+      // Se já instalado ou navegador sem prompt automático (ex.: Safari iOS), abre o guia passo a passo
+      openModal('pwa_instructions');
     }
   });
 
   window.addEventListener('appinstalled', () => {
     console.log('[InfoHub PWA] Aplicativo instalado com sucesso.');
-    if (installBtn) {
-      installBtn.style.display = 'none';
-      installBtn.setAttribute('aria-hidden', 'true');
-    }
+    installBtn.innerHTML = `
+      <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+      <span>App Instalado</span>
+    `;
+    installBtn.classList.add('is-installed');
     deferredInstallPrompt = null;
   });
 }
