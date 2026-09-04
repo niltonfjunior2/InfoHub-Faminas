@@ -32,6 +32,12 @@ describe('Sprint 01: Validação do Header, Hero e Footer Institucional', () => 
     expect(htmlContent).toContain('Política de Privacidade');
   });
 
+  it('o rodapé deve conter o link de destaque para o curso de ADS com atributos seguros', () => {
+    expect(htmlContent).toContain('https://www.unifaminas.edu.br/cursos/analise-e-desenvolvimento-de-sistemas');
+    expect(htmlContent).toContain('id="link-curso-ads"');
+    expect(htmlContent).toContain('Análise e Desenvolvimento de Sistemas');
+  });
+
   it('deve carregar as folhas de estilo obrigatórias de layout e variáveis', () => {
     expect(htmlContent).toContain('/src/css/variables.css');
     expect(htmlContent).toContain('/src/css/base.css');
