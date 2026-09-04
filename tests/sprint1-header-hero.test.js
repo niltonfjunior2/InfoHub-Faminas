@@ -6,11 +6,11 @@ describe('Sprint 01: Validação do Header, Hero e Footer Institucional', () => 
   const htmlPath = path.resolve(__dirname, '../index.html');
   const htmlContent = fs.readFileSync(htmlPath, 'utf-8');
 
-  it('deve conter o link em destaque para o portal oficial UNIFAMINAS com atributos seguros', () => {
+  it('deve conter o link em destaque para o portal oficial com texto Portal FAMINAS e atributos seguros', () => {
     expect(htmlContent).toContain('https://www.unifaminas.edu.br/principal');
     expect(htmlContent).toContain('target="_blank"');
     expect(htmlContent).toContain('rel="noopener noreferrer"');
-    expect(htmlContent).toContain('Portal UNIFAMINAS');
+    expect(htmlContent).toContain('Portal FAMINAS');
   });
 
   it('deve conter a logomarca da FAMINAS com texto alternativo apropriado', () => {

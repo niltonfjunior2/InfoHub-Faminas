@@ -1,166 +1,169 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InfoHub FAMINAS — Hub de Autoatendimento Acadêmico</title>
-    <meta name="description" content="Central institucional de autoatendimento acadêmico para 15 setores da FAMINAS, desenvolvida no projeto de extensão curricular de Análise e Desenvolvimento de Sistemas (ADS)." />
-    
-    <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#0B1B29" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="icon" type="image/png" href="/assets/images/logo-faminas.png" />
-    <link rel="apple-touch-icon" href="/assets/images/logo-faminas.png" />
 
-    <!-- Google Fonts & Material Symbols -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Red+Hat+Display:wght@500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InfoHub FAMINAS — Hub de Autoatendimento Acadêmico</title>
+  <meta name="description"
+    content="Central institucional de autoatendimento acadêmico para 15 setores da FAMINAS, desenvolvida no projeto de extensão curricular de Análise e Desenvolvimento de Sistemas (ADS)." />
 
-    <!-- CSS Modules -->
-    <link rel="stylesheet" href="/src/css/variables.css" />
-    <link rel="stylesheet" href="/src/css/base.css" />
-    <link rel="stylesheet" href="/src/css/layout.css" />
-    <link rel="stylesheet" href="/src/css/cards.css" />
-    <link rel="stylesheet" href="/src/css/modais.css" />
-  </head>
-  <body>
-    <!-- Cabeçalho Institucional Oficial -->
-    <header id="main-header" class="site-header">
-      <div class="header-container container">
-        <div class="brand-wrapper">
-          <a href="/" aria-label="InfoHub FAMINAS - Página Inicial">
-            <img src="/assets/images/logo-faminas.png" alt="Logomarca Oficial FAMINAS" class="brand-logo" />
-          </a>
-          <div class="brand-divider" aria-hidden="true"></div>
-          <div class="brand-meta">
-            <span class="brand-title">InfoHub FAMINAS</span>
-            <span class="brand-subtitle">Extensão Acadêmica • ADS</span>
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#0B1B29" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" type="image/png" href="/assets/images/logo-faminas.png" />
+  <link rel="apple-touch-icon" href="/assets/images/logo-faminas.png" />
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Red+Hat+Display:wght@500;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+
+  <!-- CSS Modules -->
+  <link rel="stylesheet" href="/src/css/variables.css" />
+  <link rel="stylesheet" href="/src/css/base.css" />
+  <link rel="stylesheet" href="/src/css/layout.css" />
+  <link rel="stylesheet" href="/src/css/cards.css" />
+  <link rel="stylesheet" href="/src/css/modais.css" />
+</head>
+
+<body>
+  <!-- Cabeçalho Institucional Oficial -->
+  <header id="main-header" class="site-header">
+    <div class="header-container container">
+      <div class="brand-wrapper">
+        <a href="/" aria-label="InfoHub FAMINAS - Página Inicial">
+          <img src="/assets/images/logo-faminas.png" alt="Logomarca Oficial FAMINAS" class="brand-logo" />
+        </a>
+        <div class="brand-divider" aria-hidden="true"></div>
+        <div class="brand-meta">
+          <span class="brand-title">InfoHub FAMINAS</span>
+          <span class="brand-subtitle">Extensão Acadêmica • ADS</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-outline-light btn-install" id="btn-install-pwa" style="display: none;"
+          aria-label="Instalar o aplicativo InfoHub FAMINAS no dispositivo" title="Instalar aplicativo">
+          <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+          <span class="btn-text-label">Instalar App</span>
+        </button>
+        <a href="https://www.unifaminas.edu.br/principal" target="_blank" rel="noopener noreferrer"
+          class="btn btn-primary-highlight btn-portal" id="link-portal-unifaminas"
+          aria-label="Acessar o portal oficial FAMINAS em nova janela">
+          <span class="btn-text-full">Portal FAMINAS</span>
+          <span class="btn-text-short">Portal</span>
+          <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Área Principal de Conteúdo -->
+  <main id="main-content">
+    <!-- Seção Hero Institucional -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+      <div class="hero-content container">
+        <div class="hero-tag">
+          <span class="material-symbols-outlined" aria-hidden="true">school</span>
+          Engenharia de Software • ADS FAMINAS
+        </div>
+        <h1 id="hero-heading" class="hero-title">
+          Projeto InfoHub <span>Faminas</span>
+        </h1>
+        <p class="hero-description">
+          Guia rápido e unificado de processos institucionais. Mapeamento, modelagem de requisitos e canais de
+          atendimento desenvolvidos pela comunidade acadêmica para a comunidade acadêmica.
+        </p>
+        <div class="hero-badges-group" aria-label="Destaques do projeto">
+          <div class="hero-badge-item">
+            <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
+            <span>15 Setores Integrados</span>
+          </div>
+          <div class="hero-badge-item">
+            <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+            <span>Autoatendimento 24/7</span>
+          </div>
+          <div class="hero-badge-item">
+            <span class="material-symbols-outlined" aria-hidden="true">devices</span>
+            <span>PWA Mobile-First</span>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="header-actions">
-          <button 
-            type="button" 
-            class="btn btn-outline-light btn-install" 
-            id="btn-install-pwa" 
-            style="display: none;" 
-            aria-label="Instalar o aplicativo InfoHub FAMINAS no dispositivo"
-          >
-            <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
-            <span>Instalar App</span>
+    <!-- Seção do Catálogo de Serviços (15 Setores em Matriz 5x3) -->
+    <section id="services" class="services-section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="services-header">
+          <div class="services-section-tag">
+            <span class="material-symbols-outlined" aria-hidden="true">dashboard</span>
+            <span>Diretório de Canais Institucionais</span>
+          </div>
+          <h2 id="services-heading" class="services-title">
+            15 Setores para Autoatendimento
+          </h2>
+          <p class="services-subtitle">
+            Selecione o setor desejado para consultar normativas, fluxos oficiais, prazos e canais de atendimento
+            homologados.
+          </p>
+        </div>
+        <div id="services-grid" class="services-grid">
+          <!-- Renderizado dinamicamente via cards-renderer.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé Institucional -->
+  <footer id="main-footer" class="site-footer">
+    <div class="footer-main">
+      <div class="footer-info">
+        <img src="/assets/images/logo-faminas.png" alt="FAMINAS" class="footer-logo" />
+        <p class="footer-text">
+          O <strong>InfoHub FAMINAS</strong> é uma iniciativa extensionista curricularizada desenvolvida pelos
+          acadêmicos do curso de <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> na disciplina de
+          <strong>Engenharia de Software</strong>, com foco no autoatendimento, clareza processual e usabilidade para
+          toda a comunidade universitária.
+        </p>
+      </div>
+
+      <div class="footer-links-group">
+        <span class="footer-links-title">Informações Institucionais</span>
+        <nav class="footer-nav" aria-label="Links institucionais e termos">
+          <button type="button" class="footer-link-btn" id="btn-modal-sobre" data-modal="sobre">
+            <span class="material-symbols-outlined" aria-hidden="true">info</span>
+            Sobre o Projeto
           </button>
-          <a 
-            href="https://www.unifaminas.edu.br/principal" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="btn btn-primary-highlight"
-            id="link-portal-unifaminas"
-            aria-label="Acessar o portal oficial UNIFAMINAS em nova janela"
-          >
-            <span>Portal UNIFAMINAS</span>
-            <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
-          </a>
-        </div>
+          <button type="button" class="footer-link-btn" id="btn-modal-termos" data-modal="termos">
+            <span class="material-symbols-outlined" aria-hidden="true">gavel</span>
+            Termos de Uso
+          </button>
+          <button type="button" class="footer-link-btn" id="btn-modal-privacidade" data-modal="privacidade">
+            <span class="material-symbols-outlined" aria-hidden="true">security</span>
+            Política de Privacidade
+          </button>
+        </nav>
       </div>
-    </header>
+    </div>
 
-    <!-- Área Principal de Conteúdo -->
-    <main id="main-content">
-      <!-- Seção Hero Institucional -->
-      <section id="hero" class="hero-section" aria-labelledby="hero-heading">
-        <div class="hero-content container">
-          <div class="hero-tag">
-            <span class="material-symbols-outlined" aria-hidden="true">school</span>
-            Engenharia de Software • ADS FAMINAS
-          </div>
-          <h1 id="hero-heading" class="hero-title">
-            Central de Autoatendimento <span>Acadêmico</span>
-          </h1>
-          <p class="hero-description">
-            Guia rápido e unificado de processos institucionais. Mapeamento, modelagem de requisitos e canais de atendimento desenvolvidos pela comunidade acadêmica para a comunidade acadêmica.
-          </p>
-          <div class="hero-badges-group" aria-label="Destaques do projeto">
-            <div class="hero-badge-item">
-              <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
-              <span>15 Setores Integrados</span>
-            </div>
-            <div class="hero-badge-item">
-              <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
-              <span>Autoatendimento 24/7</span>
-            </div>
-            <div class="hero-badge-item">
-              <span class="material-symbols-outlined" aria-hidden="true">devices</span>
-              <span>PWA Mobile-First</span>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div class="footer-bottom">
+      <p>&copy; 2026 FAMINAS — Faculdade de Minas. Todos os direitos reservados.</p>
+      <p>Desenvolvido com excelência técnica e padrões Web Standards.</p>
+    </div>
+  </footer>
 
-      <!-- Seção do Catálogo de Serviços (15 Setores em Matriz 5x3) -->
-      <section id="services" class="services-section" aria-labelledby="services-heading">
-        <div class="container">
-          <div class="services-header">
-            <div class="services-section-tag">
-              <span class="material-symbols-outlined" aria-hidden="true">dashboard</span>
-              <span>Diretório de Canais Institucionais</span>
-            </div>
-            <h2 id="services-heading" class="services-title">
-              15 Setores para Autoatendimento
-            </h2>
-            <p class="services-subtitle">
-              Selecione o setor desejado para consultar normativas, fluxos oficiais, prazos e canais de atendimento homologados.
-            </p>
-          </div>
-          <div id="services-grid" class="services-grid">
-            <!-- Renderizado dinamicamente via cards-renderer.js -->
-          </div>
-        </div>
-      </section>
-    </main>
+  <!-- Contêiner de Modais (Sprint 02) -->
+  <div id="modals-root" aria-live="polite"></div>
 
-    <!-- Rodapé Institucional -->
-    <footer id="main-footer" class="site-footer">
-      <div class="footer-main">
-        <div class="footer-info">
-          <img src="/assets/images/logo-faminas.png" alt="FAMINAS" class="footer-logo" />
-          <p class="footer-text">
-            O <strong>InfoHub FAMINAS</strong> é uma iniciativa extensionista curricularizada desenvolvida pelos acadêmicos do curso de <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> na disciplina de <strong>Engenharia de Software</strong>, com foco no autoatendimento, clareza processual e usabilidade para toda a comunidade universitária.
-          </p>
-        </div>
+  <!-- Script de Inicialização da Aplicação -->
+  <script type="module" src="/src/js/app.js"></script>
+</body>
 
-        <div class="footer-links-group">
-          <span class="footer-links-title">Informações Institucionais</span>
-          <nav class="footer-nav" aria-label="Links institucionais e termos">
-            <button type="button" class="footer-link-btn" id="btn-modal-sobre" data-modal="sobre">
-              <span class="material-symbols-outlined" aria-hidden="true">info</span>
-              Sobre o Projeto
-            </button>
-            <button type="button" class="footer-link-btn" id="btn-modal-termos" data-modal="termos">
-              <span class="material-symbols-outlined" aria-hidden="true">gavel</span>
-              Termos de Uso
-            </button>
-            <button type="button" class="footer-link-btn" id="btn-modal-privacidade" data-modal="privacidade">
-              <span class="material-symbols-outlined" aria-hidden="true">security</span>
-              Política de Privacidade
-            </button>
-          </nav>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 FAMINAS — Faculdade de Minas. Todos os direitos reservados.</p>
-        <p>Desenvolvido com excelência técnica e padrões Web Standards.</p>
-      </div>
-    </footer>
-
-    <!-- Contêiner de Modais (Sprint 02) -->
-    <div id="modals-root" aria-live="polite"></div>
-
-    <!-- Script de Inicialização da Aplicação -->
-    <script type="module" src="/src/js/app.js"></script>
-  </body>
 </html>
