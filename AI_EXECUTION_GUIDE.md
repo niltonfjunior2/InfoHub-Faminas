@@ -39,11 +39,14 @@ Toda alteração deve ser validada executando verificações funcionais e técni
    * Testar o bloqueio de scroll da página (`body.modal-open`).
 3. **Validação do Fallback de Indisponibilidade:**
    * Clicar em um card com `status: "coming_soon"` e certificar-se de que o modal de homologação abre, impedindo navegação para link quebrado, e que o botão de retorno fecha o modal com sucesso.
-4. **Validação do Link Oficial UNIFAMINAS:**
-   * Certificar-se de que o botão no cabeçalho direciona para `https://www.unifaminas.edu.br/principal` em nova aba com `rel="noopener noreferrer"`.
+4. **Validação dos Links Oficiais Institucionais:**
+   * Certificar-se de que o botão no cabeçalho direciona para `https://www.unifaminas.edu.br/principal` com rótulo institucional e layout responsivo.
+   * Certificar-se de que o card no rodapé direciona para `https://www.unifaminas.edu.br/cursos/analise-e-desenvolvimento-de-sistemas`.
+   * Ambos em nova aba com `rel="noopener noreferrer"`.
 5. **Validação do Service Worker & PWA:**
    * Verificar se o Service Worker registra sem erros no console (`navigator.serviceWorker.register`).
    * Garantir que os arquivos essenciais estão listados no cache.
+   * Garantir que o badge "Instalar App" no Hero aciona a instalação ou modal instrutivo.
 
 ---
 
@@ -70,6 +73,7 @@ Uma tarefa só pode ser dada como concluída quando:
 - [ ] 15 cards exibidos no padrão de grid 5x3 (desktop) e coluna única (mobile).
 - [ ] Design alinhado às cores, logos e tipografia do EducaHub/FAMINAS.
 - [ ] Atalho em destaque para o portal oficial `unifaminas.edu.br` presente no cabeçalho.
+- [ ] Card de destaque para o curso de ADS no rodapé institucional.
 - [ ] Modais de Sobre, Termos e Privacidade funcionais na própria tela.
 - [ ] Fallback declarativo operacional para serviços em desenvolvimento.
 - [ ] Service Worker e manifesto PWA validados sem erros de console.

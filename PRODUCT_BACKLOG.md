@@ -22,10 +22,10 @@ Este documento consolida o Product Backlog do **InfoHub FAMINAS**, derivado rigo
 > **Para que** eu tenha total segurança e confiança de que se trata de um canal oficial e legítimo da faculdade.
 
 **Critérios de Aceite:**
-* [x] **CA01.1 (Cores):** Utilizar paleta alinhada ao EducaHub/FAMINAS: Azul Marinho Institucional (`#0B1B29`), Azul Destaque/Primário (`#005691` / `#0072CE`), Fundos claros (`#F8F9FA` e `#FFFFFF`) e bordas suaves (`#E2E8F0`).
+* [x] **CA01.1 (Cores):** Utilizar paleta alinhada ao EducaHub/FAMINAS: Azul Marinho Institucional (`#0B1B29`), Azul Destaque/Primário (`#005691` / `#0072CE`), Barra superior em Branco Puro (`#FFFFFF`) com tipografia escura de alto contraste, Fundos claros (`#F8F9FA` e `#FFFFFF`) e bordas suaves (`#E2E8F0`).
 * [x] **CA01.2 (Tipografia):** Carregamento das famílias de fontes `Roboto`, `Montserrat` e `Red Hat Display` via Google Fonts.
-* [x] **CA01.3 (Logomarca):** Utilização da imagem institucional oficial presente no projeto (`padroes/logo-faminas.png`) com proporções perfeitas e atributo alt.
-* [x] **CA01.4 (Hero Section):** Seção principal contendo título do InfoHub, identificação do projeto de extensão de ADS e frase de boas-vindas ao autoatendimento.
+* [x] **CA01.3 (Logomarca):** Utilização da imagem institucional oficial presente no projeto (`padroes/logo-faminas.png`) com proporções perfeitas, `flex-shrink: 0` para preservação em telas compactas e atributo alt.
+* [x] **CA01.4 (Hero Section):** Seção principal contendo título do InfoHub, identificação do projeto de extensão de ADS, frase de boas-vindas ao autoatendimento e badges institucionais (incluindo o badge pulsante em destaque de instalação do PWA).
 
 ---
 
@@ -84,8 +84,8 @@ Este documento consolida o Product Backlog do **InfoHub FAMINAS**, derivado rigo
 ## EPIC 03: CONEXÃO INSTITUCIONAL & CONTEÚDOS DE APOIO
 *Status do Epic: **CONCLUÍDO (100%)***
 
-### Feature 3.1: Destaque ao Portal Oficial UNIFAMINAS
-* **Status:** CONCLUÍDO (Sprint 01)
+### Feature 3.1: Destaque ao Portal Oficial FAMINAS
+* **Status:** CONCLUÍDO (Sprint 01 + Otimização Mobile)
 * **Prioridade:** Alta
 * **Dependências:** Feature 1.1
 
@@ -96,8 +96,9 @@ Este documento consolida o Product Backlog do **InfoHub FAMINAS**, derivado rigo
 > **Para que** eu possa acessar serviços gerais da faculdade fora do escopo deste hub.
 
 **Critérios de Aceite:**
-* [x] **CA03.1 (Link Destacado):** Botão fixado no cabeçalho direcionando para `https://www.unifaminas.edu.br/principal`.
-* [x] **CA03.2 (Segurança):** Abertura em nova aba com `target="_blank" rel="noopener noreferrer"`.
+* [x] **CA04.1 (Link Destacado):** Botão fixado no cabeçalho com rótulo institucional *"Portal FAMINAS"* direcionando para `https://www.unifaminas.edu.br/principal`.
+* [x] **CA04.2 (Otimização Mobile):** Adaptação responsiva com rótulos contextuais (`.btn-text-full` e `.btn-text-short`) evitando colapso do cabeçalho em viewports de 375px.
+* [x] **CA04.3 (Segurança):** Abertura em nova aba com `target="_blank" rel="noopener noreferrer"`.
 
 ### Feature 3.2: Modais Sobrepostos para Conteúdos Institucionais (Sobre, Termos, Privacidade)
 * **Status:** CONCLUÍDO (Sprint 02)
@@ -116,13 +117,28 @@ Este documento consolida o Product Backlog do **InfoHub FAMINAS**, derivado rigo
 * [x] **CA05.3 (Modal Política de Privacidade):** Declaração formal de conformidade com a LGPD e ausência de coleta de dados pessoais sensíveis.
 * [x] **CA05.4 (Usabilidade e Acessibilidade):** Fechamento via botão "X", tecla `Escape`, clique no backdrop e foco acessível.
 
+### Feature 3.3: Destaque ao Curso de Análise e Desenvolvimento de Sistemas (ADS)
+* **Status:** CONCLUÍDO (Refinamento Pós-Sprint 03)
+* **Prioridade:** Alta
+* **Dependências:** Feature 1.1
+
+#### User Story US08 — Conexão com o Curso de Origem do Projeto
+* **Status:** Entregue e Aprovado
+> **Como** visitante ou estudante da instituição,  
+> **Eu quero** acessar diretamente a página oficial do curso de Análise e Desenvolvimento de Sistemas a partir do rodapé,  
+> **Para que** eu conheça a graduação que idealizou e desenvolveu as soluções do InfoHub.
+
+**Critérios de Aceite:**
+* [x] **CA08.1 (Card em Destaque):** Card visualmente destacado no rodapé institucional (`.footer-featured-course`).
+* [x] **CA08.2 (Link Oficial e Seguro):** Apontamento direto para `https://www.unifaminas.edu.br/cursos/analise-e-desenvolvimento-de-sistemas` com `target="_blank" rel="noopener noreferrer"`.
+
 ---
 
 ## EPIC 04: PWA (PROGRESSIVE WEB APP) & PRONTIDÃO PARA DEPLOY
 *Status do Epic: **CONCLUÍDO (100%)***
 
 ### Feature 4.1: Capacidade PWA e Manifesto
-* **Status:** CONCLUÍDO (Sprint 03)
+* **Status:** CONCLUÍDO (Sprint 03 + Otimização Mobile)
 * **Prioridade:** Média
 * **Dependências:** Feature 1.1, Feature 2.1
 
@@ -133,9 +149,9 @@ Este documento consolida o Product Backlog do **InfoHub FAMINAS**, derivado rigo
 > **Para que** eu tenha um atalho permanente para resolver qualquer dúvida no campus.
 
 **Critérios de Aceite:**
-* [x] **CA06.1 (Web App Manifest):** `manifest.json` com `name: "InfoHub FAMINAS"`, `short_name: "InfoHub FAMINAS"`, cores de tema (`#0B1B29`), display `standalone` e ícones 192x192, 512x512 e SVG.
+* [x] **CA06.1 (Web App Manifest):** `manifest.json` com `name: "InfoHub FAMINAS"`, `short_name: "InfoHub FAMINAS"`, cores de tema (`#FFFFFF`), display `standalone` e ícones 192x192, 512x512 e SVG.
 * [x] **CA06.2 (Service Worker):** Arquivo `sw.js` com estratégia *Stale-While-Revalidate* e suporte a funcionamento offline do shell.
-* [x] **CA06.3 (Botão de Instalação):** Botão nativo *"Instalar App"* acionado no cabeçalho via evento `beforeinstallprompt`.
+* [x] **CA06.3 (Badge de Instalação no Hero):** Badge interativo *"Instalar App"* posicionado na seção Hero logo após *"Autoatendimento 24/7"*, em destaque visual pulsante com gradiente vivo, acionando o prompt de instalação nativo ou modal com instruções completas.
 
 ### Feature 4.2: Configuração de Deploy Estático na Vercel
 * **Status:** CONCLUÍDO (Sprint 03)

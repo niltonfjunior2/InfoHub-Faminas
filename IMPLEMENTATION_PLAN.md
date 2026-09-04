@@ -55,10 +55,21 @@ gantt
 * **Entregas Técnicas Validadas:**
   1. [x] Manifesto PWA completo em `public/manifest.json` com ícones em alta resolução (192x192, 512x512 e SVG).
   2. [x] Service Worker `sw.js` com pré-cache e estratégia *Stale-While-Revalidate* e suporte offline.
-  3. [x] Módulo `src/js/pwa.js` e botão institucional *"Instalar App"* acionado via `beforeinstallprompt`.
+  3. [x] Módulo `src/js/pwa.js` e badge institucional interativo *"Instalar App"* acionado via `beforeinstallprompt` ou drawer de instruções guiadas.
   4. [x] Configuração `vercel.json` com headers de segurança (`nosniff`, `SAMEORIGIN`, `strict-origin-when-cross-origin`) e invalidação de cache para o Service Worker.
   5. [x] Documentação técnica e manual de governança no [README.md](file:///c:/Users/Nilton/Workspaces/AG_Workspace/InfoHub-Faminas/README.md).
-  6. [x] Suíte de 19 testes automatizados via Vitest com 100% de taxa de aprovação.
+  6. [x] Suíte de testes automatizados via Vitest com 100% de taxa de aprovação (20 testes).
+
+---
+
+### SPRINT DE REFINAMENTO (PÓS-SPRINT 03): UX MOBILE & FIDELIDADE INSTITUCIONAL
+* **Status:** CONCLUÍDA (100%)
+* **Objetivo:** Otimizar o cabeçalho para viewports móveis estreitas ($\le 375\text{px}$), migrar o gatilho de instalação do PWA para o Hero com destaque visual pulsante, aplicar fundo branco de alto contraste na barra superior e incluir card de destaque para o curso de ADS no rodapé.
+* **Entregas Técnicas Validadas:**
+  1. [x] Realocação do botão "Instalar App" para o Hero (`.hero-badges-group`), eliminando esmagamento do logotipo no mobile e destacando a chamada com gradiente ciano e animação pulsante.
+  2. [x] Renomeação do atalho institucional para *"Portal FAMINAS"* com flexibilidade responsiva via `.btn-text-full` e `.btn-text-short`.
+  3. [x] Barra superior atualizada para fundo branco puro (`#FFFFFF`) com tipografia marinho escura (`#0B1B29`), subtítulo azul (`#005691`) e metatag `theme-color` sincronizada.
+  4. [x] Inclusão de card de destaque no rodapé direcionando para a página oficial do curso de Análise e Desenvolvimento de Sistemas da FAMINAS (`https://www.unifaminas.edu.br/cursos/analise-e-desenvolvimento-de-sistemas`).
 
 ---
 
@@ -69,17 +80,20 @@ gantt
 | **Atraso na entrega dos sites dos 15 grupos** | Mitigado | Catálogo declarativo com status `"coming_soon"`, exibindo modal de homologação e botão de retorno sem quebrar a experiência do usuário. |
 | **Quebra de layout no grid 5x3 em tablets/smartphones** | Mitigado | CSS Grid configurado com 1 coluna (< 640px), 2 colunas (640-1023px) e 3 colunas fixas ($\ge$ 1024px). |
 | **Bloqueio de cache após atualização de links** | Mitigado | Cabeçalho `Cache-Control: no-cache` no `vercel.json` para `sw.js` e `self.skipWaiting()`. |
-| **Incompatibilidade com PWA no iOS** | Mitigado | Meta tags `apple-mobile-web-app-capable` e link `apple-touch-icon`. |
+| **Incompatibilidade com PWA no iOS** | Mitigado | Meta tags `apple-mobile-web-app-capable`, link `apple-touch-icon` e modal instrutivo passo a passo ao tocar no badge "Instalar App". |
+| **Superlotação no cabeçalho em smartphones pequenos** | Mitigado | Realocação do badge de instalação para o Hero e rótulos responsivos dinâmicos. |
 
 ---
 
 ## 4. CRITÉRIOS DE PRONTIDÃO PARA PRODUÇÃO (DEFINITION OF DONE)
 - [x] Todos os 15 cards setoriais renderizados na ordem pedagógica do Guia.
 - [x] Grid 5x3 no desktop e 1 coluna em smartphones.
-- [x] Botão oficial UNIFAMINAS em destaque no cabeçalho.
-- [x] Todos os 4 modais funcionais com transições suaves e acessibilidade.
-- [x] Fallback declarativo operacional para serviços em desenvolvimento.
-- [x] 19 testes automatizados aprovados no Vitest.
+- [x] Botão oficial *"Portal FAMINAS"* em destaque no cabeçalho com layout responsivo.
+- [x] Barra superior institucional com fundo branco de alto contraste e logotipo imutável (`flex-shrink: 0`).
+- [x] Card de destaque para o curso de ADS no rodapé institucional.
+- [x] Todos os 4 modais funcionais com transições suaves e acessibilidade (WAI-ARIA).
+- [x] Fallback declarativo operacional para serviços em desenvolvimento com retorno seguro.
+- [x] 20 testes automatizados aprovados no Vitest com zero falhas.
 - [x] Zero erros ou avisos no linter ESLint.
-- [x] PWA instalável com Service Worker e manifesto válidos.
+- [x] PWA instalável com Service Worker, manifesto válido e badge de instalação em evidência no Hero.
 - [x] Compatibilidade total com deploy estático na Vercel e GitHub.

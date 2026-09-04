@@ -17,6 +17,19 @@
   2. Implementação de `self.skipWaiting()` na instalação e limpeza automática de caches legados no evento `activate`.
   3. Estratégia *Stale-While-Revalidate* e versionamento explícito (`CACHE_NAME = 'infohub-faminas-v1.0.0'`).
 
+### Problema 3: Superlotação e Compressão no Cabeçalho Mobile
+* **Descrição:** A presença simultânea do logotipo, título institucional e dos botões "Instalar App" e "Portal UNIFAMINAS" provocava colapso visual em smartphones ($\le 400\text{px}$), espremendo a logomarca e truncando títulos.
+* **Causa:** Concorrência de espaço horizontal na barra superior em viewports compactas com botões de rótulo textual extenso.
+* **Solução Adotada:**
+  1. Transferência do gatilho de instalação do PWA para a seção Hero (`.hero-badges-group`), onde ganhou destaque visual máximo com gradiente e animação de pulso.
+  2. Fixação de `flex-shrink: 0` na logomarca e no contêiner da marca, garantindo visibilidade imutável.
+  3. Renomeação para "Portal FAMINAS" e adoção de classes responsivas (`.btn-text-full` e `.btn-text-short`).
+
+### Problema 4: Otimização de Contraste e Leveza da Barra Superior
+* **Descrição:** Necessidade de reforçar o contraste de leitura e a fidelidade visual institucional com os padrões claros do portal FAMINAS.
+* **Causa:** O fundo azul marinho escuro prévio criava uma transição abrupta com as demais superfícies claras do ecossistema educacional.
+* **Solução Adotada:** Fundo do cabeçalho atualizado para branco puro (`#FFFFFF` / `var(--color-bg-card)`), com tipografia em azul marinho escuro (`#0B1B29`), subtítulo em azul institucional (`#005691`) e alinhamento da metatag PWA `theme-color` para `#FFFFFF`.
+
 ---
 
 ## 2. RESTRIÇÕES DESCOBERTAS E IMPACTOS
@@ -30,9 +43,10 @@
 
 ## 3. LIÇÕES APRENDIDAS
 
-* **Simplicidade de Vanilla Web Standards:** A dispensa de frameworks pesados (React, Angular, Vue) eliminou problemas de versionamento de pacotes, resultando em um bundle de build de apenas **105ms** e pontuação de performance próxima de 100.
+* **Simplicidade de Vanilla Web Standards:** A dispensa de frameworks pesados (React, Angular, Vue) eliminou problemas de versionamento de pacotes, resultando em um bundle de build de apenas **110ms** e pontuação de performance próxima de 100.
 * **Desacoplamento Orientado a Dados:** Isolar os dados dos 15 setores em um único arquivo JS permitiu que o HTML permanecesse limpo e sem duplicações, facilitando a manutenção por professores sem conhecimento de frontend avançado.
-* **Design System Institucional com CSS Moderno:** O uso de CSS Custom Properties (`var(--...)`) e CSS Grid permitiu replicar a identidade visual do *EducaHub* e garantir a matriz 5x3 no desktop e 1 coluna no mobile de forma elegante.
+* **Hierarquia Visual no Hero:** A inserção do badge "Instalar App" em destaque com gradiente vivo dentro da seção Hero gerou um ponto focal de conversão muito mais eficiente do que um botão concorrendo por espaço na barra superior.
+* **Conexão Pedagógica Curricular:** A inclusão de card de destaque para a página oficial do curso de ADS no rodapé institucional reforçou o valor acadêmico da extensão universitária.
 
 ---
 
