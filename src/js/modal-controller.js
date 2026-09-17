@@ -29,7 +29,15 @@ const MODAL_TEMPLATES = {
       <p>
         Cada equipe de estudantes assumiu a responsabilidade de um tema institucional prioritário, cobrindo desde credenciais de acesso, estágios, clínicas-escola, dependências até TCC e colação de grau, promovendo autonomia informacional para toda a FAMINAS.
       </p>
-    `
+
+      <h3>Transparência e Uso de Inteligência Artificial</h3>
+      <p>
+        Em compromisso com a integridade acadêmica e as boas práticas de engenharia de software, declara-se que ferramentas de <strong>Inteligência Artificial (IA) Generativa</strong> foram empregadas no processo de desenvolvimento como tecnologia assistiva (apoio na prototipação, estruturação de código Web Standards, parametrização de testes e documentação).
+      </p>
+      <div class="modal-highlight-box">
+        <strong>Supervisão Humana:</strong> Toda a concepção arquitetural, elicitação e validação de requisitos, curadoria de informações oficiais e decisões técnicas foram realizadas e validadas integralmente pelos estudantes e professores orientadores do curso de ADS da FAMINAS.
+      </div>
+    `,
   },
   termos: {
     title: 'Termos de Uso Institucionais',
@@ -53,7 +61,7 @@ const MODAL_TEMPLATES = {
       <p>
         É vedada a reprodução indevida ou modificação não autorizada dos conteúdos para fins escusos. O código e os protótipos integram o acervo de extensão e inovação pedagógica do curso de ADS da FAMINAS.
       </p>
-    `
+    `,
   },
   privacidade: {
     title: 'Política de Privacidade e LGPD',
@@ -77,7 +85,7 @@ const MODAL_TEMPLATES = {
       <p>
         Dúvidas sobre o tratamento de dados institucionais na FAMINAS podem ser direcionadas aos canais oficiais da instituição ou à coordenação do curso de Análise e Desenvolvimento de Sistemas.
       </p>
-    `
+    `,
   },
   pwa_instructions: {
     title: 'Instalação do InfoHub FAMINAS',
@@ -102,8 +110,8 @@ const MODAL_TEMPLATES = {
         <strong>No Computador (Chrome / Edge):</strong><br>
         Clique no ícone de instalação localizado na barra de endereços (ao lado do botão de favoritos) e confirme em <em>"Instalar"</em>.
       </div>
-    `
-  }
+    `,
+  },
 };
 
 let currentActiveModal = null;
@@ -184,10 +192,22 @@ export function openModal(modalKey, customData = null) {
         Para dúvidas urgentes deste setor, recomendamos o atendimento presencial no campus ou através do portal institucional oficial da FAMINAS.
       </div>
     `;
-    modalElement = createModalElement('unavailable', `${serviceName}`, 'pending_actions', content, 'Retornar à página principal');
+    modalElement = createModalElement(
+      'unavailable',
+      `${serviceName}`,
+      'pending_actions',
+      content,
+      'Retornar à página principal'
+    );
   } else if (MODAL_TEMPLATES[modalKey]) {
     const template = MODAL_TEMPLATES[modalKey];
-    modalElement = createModalElement(modalKey, template.title, template.icon, template.body, 'Retornar à página principal');
+    modalElement = createModalElement(
+      modalKey,
+      template.title,
+      template.icon,
+      template.body,
+      'Retornar à página principal'
+    );
   } else {
     return;
   }

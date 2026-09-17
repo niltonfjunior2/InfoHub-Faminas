@@ -38,7 +38,9 @@ describe('Sprint 02: Validação do Catálogo dos 15 Cards, Modais e Fallback', 
       expect(card.getAttribute('tabindex')).toBe('0');
       expect(card.querySelector('.card-title')?.textContent).toBe(service.title);
       expect(card.querySelector('.card-description')?.textContent).toBe(service.description);
-      expect(card.querySelector('.card-order-badge')?.textContent).toBe(`#${String(service.order).padStart(2, '0')}`);
+      expect(card.querySelector('.card-order-badge')?.textContent).toBe(
+        `#${String(service.order).padStart(2, '0')}`
+      );
     });
   });
 
@@ -71,6 +73,7 @@ describe('Sprint 02: Validação do Catálogo dos 15 Cards, Modais e Fallback', 
     let dialog = document.querySelector('.modal-dialog');
     expect(dialog?.textContent).toContain('Sobre o Projeto de Extensão');
     expect(dialog?.textContent).toContain('Engenharia de Software');
+    expect(dialog?.textContent).toContain('Inteligência Artificial');
     closeModal();
 
     // Testa modal Termos

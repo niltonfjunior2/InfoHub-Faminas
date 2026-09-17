@@ -10,12 +10,13 @@ O **InfoHub FAMINAS** atua como diretório oficial e unificado de acesso a 15 p�
 
 O projeto adota estritamente os padrões de arquitetura e tecnologia definidos nas diretrizes curriculares e institucionais:
 
-* **Estrutura:** HTML5 Semântico (`<header>`, `<main>`, `<section>`, `<article>`, `<dialog>`, `<footer>`).
-* **Estilização:** CSS3 puro com Variáveis Nativas (Design Tokens), CSS Grid e Flexbox, alinhado à identidade do [EducaHub](https://educahub.faminas.edu.br/mre).
-* **Lógica & Comportamento:** Vanilla JavaScript moderno (ES6 Modules) — zero frameworks pesados em produção.
-* **PWA (Progressive Web App):** Manifesto PWA e Service Worker com estratégia *Stale-While-Revalidate* e suporte a funcionamento offline do shell da aplicação.
-* **Modais Sobrepostos:** Diálogos e gavetas (*drawers*) nativos na própria página para conteúdos institucionais (*Sobre o Projeto*, *Termos de Uso*, *Política de Privacidade / LGPD* e *Avisos de Homologação*).
-* **Ferramental de Desenvolvimento:** Vite para servidor local e build, Vitest para testes de contrato e integridade, ESLint e Prettier para qualidade.
+- **Estrutura:** HTML5 Semântico (`<header>`, `<main>`, `<section>`, `<article>`, `<dialog>`, `<footer>`).
+- **Estilização:** CSS3 puro com Variáveis Nativas (Design Tokens), CSS Grid e Flexbox, alinhado à identidade do [EducaHub](https://educahub.faminas.edu.br/mre).
+- **Lógica & Comportamento:** Vanilla JavaScript moderno (ES6 Modules) — zero frameworks pesados em produção.
+- **PWA (Progressive Web App):** Manifesto PWA e Service Worker com estratégia _Stale-While-Revalidate_ e suporte a funcionamento offline do shell da aplicação.
+- **Modais Sobrepostos:** Diálogos e gavetas (_drawers_) nativos na própria página para conteúdos institucionais (_Sobre o Projeto_, _Termos de Uso_, _Política de Privacidade / LGPD_ e _Avisos de Homologação_).
+- **Conexão Institucional & Extensão:** Atalho em destaque para o _Portal FAMINAS_ no cabeçalho responsivo e card temático oficial para o curso de graduação em _Análise e Desenvolvimento de Sistemas (ADS)_ no rodapé.
+- **Ferramental de Desenvolvimento:** Vite para servidor local e build, Vitest para testes de contrato e integridade, ESLint e Prettier para qualidade.
 
 ---
 
@@ -43,7 +44,7 @@ InfoHub-Faminas/
 │       └── app.js                 # Ponto de entrada modular da aplicação
 ├── tests/
 │   ├── project-structure.test.js  # Teste de validação dos 15 temas obrigatórios
-│   ├── sprint1-header-hero.test.js# Teste de cabeçalho, hero e portal UNIFAMINAS
+│   ├── sprint1-header-hero.test.js# Teste de cabeçalho, hero, footer e portal FAMINAS
 │   ├── sprint2-cards-modais.test.js# Teste de renderização, modais e fallback declarativo
 │   └── sprint3-pwa-vercel.test.js # Teste de manifesto PWA, Service Worker e Vercel
 ├── index.html                     # Casca semântica da aplicação
@@ -57,10 +58,12 @@ InfoHub-Faminas/
 ## 🛠️ Como Executar Localmente
 
 ### Pré-requisitos
-* Node.js (versão 18 ou superior)
-* Gerenciador de pacotes `npm`
+
+- Node.js (versão 18 ou superior)
+- Gerenciador de pacotes `npm`
 
 ### Instalação e Execução
+
 ```bash
 # 1. Clone o repositório
 git clone https://github.com/SEU-USUARIO/InfoHub-Faminas.git
@@ -72,9 +75,11 @@ npm install
 # 3. Inicie o servidor local de desenvolvimento
 npm run dev
 ```
+
 Acesse a aplicação no seu navegador em `http://localhost:3000`.
 
 ### Executando Testes e Qualidade
+
 ```bash
 # Executa a suíte completa de testes automatizados (Vitest)
 npm test
@@ -93,7 +98,7 @@ npm run build
 
 ## 📝 Guia de Manutenção: Como Atualizar os 15 Setores
 
-Para atualizar URLs, títulos, descrições ou status de qualquer um dos 15 setores acadêmicos, **NÃO é necessário alterar arquivos HTML ou CSS**. 
+Para atualizar URLs, títulos, descrições ou status de qualquer um dos 15 setores acadêmicos, **NÃO é necessário alterar arquivos HTML ou CSS**.
 
 Toda a gestão é 100% declarativa e estática, centralizada no arquivo:
 👉 **[src/js/services-data.js](file:///c:/Users/Nilton/Workspaces/AG_Workspace/InfoHub-Faminas/src/js/services-data.js)**
@@ -150,8 +155,24 @@ O projeto foi arquitetado para deploy estático com **custo zero** e máxima res
 
 ## 📱 Instalação como Aplicativo (PWA)
 
-* **No Celular (Android / iOS):** Ao abrir o site pelo navegador Chrome ou Safari, toque no botão **"Instalar App"** no cabeçalho ou selecione *"Adicionar à Tela de Início"*.
-* **No Computador (Chrome / Edge):** Um botão discreto *"Instalar App"* ou ícone na barra de endereços permite adicionar o InfoHub diretamente à área de trabalho.
+- **No Celular (Android / iOS):** Ao abrir o site pelo navegador Chrome ou Safari, toque no badge em destaque **"Instalar App"** na seção principal (Hero) ou selecione _"Adicionar à Tela de Início"_.
+- **No Computador (Chrome / Edge):** O badge em destaque **"Instalar App"** no Hero ou o ícone de instalação na barra de endereços do navegador permite adicionar o InfoHub diretamente à área de trabalho como aplicativo nativo.
+
+---
+
+## 🤖 Transparência e Uso de Inteligência Artificial
+
+Em consonância com as diretrizes de integridade acadêmica, ética e transparência tecnológica, declara-se que o desenvolvimento deste projeto contou com o auxílio de ferramentas de **Inteligência Artificial (IA) Generativa** atuando como copiloto técnico e assistente de produtividade.
+
+### Atividades Apoiadas por IA:
+
+- **Prototipação e Código:** Apoio na estruturação inicial de componentes Web Standards (HTML5 semântico, CSS3 com variáveis nativas e Vanilla JavaScript modular);
+- **Qualidade e Testes:** Geração e parametrização de cenários de testes automatizados unitários e de integração (Vitest);
+- **Acessibilidade e Documentação:** Refinamento de boas práticas de acessibilidade (ARIA, WCAG) e auxílio na redação técnica de especificações e relatórios.
+
+### Supervisão e Governança Humana:
+
+O uso de IA foi estritamente assistivo e supervisionado. Todas as etapas críticas — incluindo elicitação de requisitos em campo, mapeamento de processos com gestores setoriais da FAMINAS, decisões arquiteturais, revisão e homologação do código-fonte e veracidade das informações acadêmicas — foram de responsabilidade integral e exclusiva dos estudantes e do corpo docente da disciplina de **Engenharia de Software** do curso de **Análise e Desenvolvimento de Sistemas (ADS)**.
 
 ---
 
