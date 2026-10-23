@@ -42,6 +42,12 @@ InfoHub-Faminas/
 │       ├── modal-controller.js    # Gerenciador de modais institucionais e acessibilidade
 │       ├── pwa.js                 # Registro de Service Worker e botão de instalação PWA
 │       └── app.js                 # Ponto de entrada modular da aplicação
+├── template-setorial/             # ★ TEMPLATE PADRÃO PARA FORK DOS ESTUDANTES (Páginas Setoriais)
+│   ├── index.html                 # Shell padrão com Hero delimitado, área central livre e modais
+│   ├── README.md                  # Manual do Aluno: regras de fork, edição e GitHub Pages
+│   ├── assets/images/             # Logomarca institucional oficial
+│   ├── css/                       # variables.css, base.css, layout.css, modais.css e custom.css
+│   └── js/                        # modal-controller.js (Sobre c/ IA, Termos, LGPD) e app.js
 ├── tests/
 │   ├── project-structure.test.js  # Teste de validação dos 15 temas obrigatórios
 │   ├── sprint1-header-hero.test.js# Teste de cabeçalho, hero, footer e portal FAMINAS
@@ -157,6 +163,17 @@ O projeto foi arquitetado para deploy estático com **custo zero** e máxima res
 
 - **No Celular (Android / iOS):** Ao abrir o site pelo navegador Chrome ou Safari, toque no badge em destaque **"Instalar App"** na seção principal (Hero) ou selecione _"Adicionar à Tela de Início"_.
 - **No Computador (Chrome / Edge):** O badge em destaque **"Instalar App"** no Hero ou o ícone de instalação na barra de endereços do navegador permite adicionar o InfoHub diretamente à área de trabalho como aplicativo nativo.
+
+---
+
+## 🎓 Template Padronizado para Estudantes de Extensão (Páginas Setoriais)
+
+Para garantir que as páginas desenvolvidas pelas equipes dos 15 setores mantenham rigorosamente o Design System e a identidade visual oficial da FAMINAS, disponibilizou-se a pasta [`template-setorial/`](./template-setorial):
+
+- **Destinação:** Essa pasta foi configurada para ser exportada como repositório modelo no GitHub, onde cada equipe discente fará um _fork_ para sua própria conta.
+- **Padrões Travados:** Identidade visual, tipografia Google Fonts, navbar com botão *"Retornar ao InfoHub"* e rodapé institucional com modais e conformidade LGPD/IA.
+- **Área Livre:** Os estudantes têm autonomia para estruturar a área central (`<section id="features">`) de acordo com as entrevistas com os setores, utilizando HTML5 semântico e a folha de estilos `css/custom.css`.
+- **Publicação Simples:** Totalmente compatível com **GitHub Pages** sem necessidade de compilação ou ferramentas de build. Instruções completas constam em [`template-setorial/README.md`](./template-setorial/README.md).
 
 ---
 

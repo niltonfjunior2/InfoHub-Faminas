@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ====================================================================
+       ATENÇÃO ESTUDANTES: 
+       Ajuste a tag <title> e a <meta description> para o nome do seu setor.
+       Exemplo: "Achados e Perdidos — InfoHub FAMINAS"
+       ==================================================================== -->
+  <title>Setor: [Nome do Setor] — InfoHub FAMINAS</title>
+  <meta name="description"
+    content="Canal de autoatendimento institucional desenvolvido pelos discentes de Análise e Desenvolvimento de Sistemas (ADS) na disciplina de Engenharia de Software da FAMINAS." />
+
+  <link rel="icon" type="image/png" href="./assets/images/logo-faminas.png" />
+
+  <!-- Google Fonts & Material Symbols Oficiais FAMINAS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Red+Hat+Display:wght@500;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+
+  <!-- Folhas de Estilo Institucionais (NÃO ALTERAR) -->
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/modais.css" />
+
+  <!-- Folha de Estilo Customizada dos Estudantes (LIVRE PARA EDIÇÃO) -->
+  <link rel="stylesheet" href="./css/custom.css" />
+</head>
+
+<body>
+  <!-- ====================================================================
+       CABEÇALHO INSTITUCIONAL OFICIAL (NÃO ALTERAR)
+       O botão de ação direciona o discente de volta ao InfoHub principal.
+       ==================================================================== -->
+  <header id="main-header" class="site-header">
+    <div class="header-container container">
+      <div class="brand-wrapper">
+        <a href="https://infohub-faminas.vercel.app" class="brand-link" aria-label="InfoHub FAMINAS - Página Inicial">
+          <img src="./assets/images/logo-faminas.png" alt="Logomarca Oficial FAMINAS" class="brand-logo" />
+        </a>
+        <div class="brand-divider" aria-hidden="true"></div>
+        <div class="brand-meta">
+          <span class="brand-title">InfoHub FAMINAS</span>
+          <span class="brand-subtitle">Extensão Acadêmica • ADS</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Botão oficial de retorno ao Hub Principal -->
+        <a 
+          href="https://infohub-faminas.vercel.app" 
+          class="btn btn-primary-highlight btn-portal" 
+          id="link-retornar-hub"
+          aria-label="Retornar à página inicial do InfoHub FAMINAS"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+          <span>Retornar ao InfoHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Área Principal da Solução Setorial -->
+  <main id="main-content">
+    <!-- ====================================================================
+         SEÇÃO HERO INSTITUCIONAL
+         ESTUDANTES: Ajuste APENAS o Título do Setor e a Descrição do Setor.
+         As tags institucionais e badges não devem ser removidas.
+         ==================================================================== -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+      <div class="hero-content container">
+        <div class="hero-tag">
+          <span class="material-symbols-outlined" aria-hidden="true">school</span>
+          Engenharia de Software • ADS FAMINAS
+        </div>
+
+        <!-- [EDITÁVEL]: Nome do Setor -->
+        <h1 id="hero-heading" class="hero-title">
+          Setor: <span>[Nome do Setor Institucional]</span>
+        </h1>
+
+        <!-- [EDITÁVEL]: Descrição e Propósito do Setor apurados na entrevista -->
+        <p class="hero-description">
+          Canal unificado de autoatendimento, mapeamento de processos oficiais, orientações normativas e canais de contato homologados junto à coordenação e gestão setorial da FAMINAS.
+        </p>
+
+        <div class="hero-badges-group" aria-label="Informações do autoatendimento">
+          <div class="hero-badge-item">
+            <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+            <span>Processos Homologados</span>
+          </div>
+          <div class="hero-badge-item">
+            <span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
+            <span>Autoatendimento Discente</span>
+          </div>
+          <div class="hero-badge-item">
+            <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+            <span>Disponível 24/7</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ÁREA CENTRAL LIVRE PARA OS ESTUDANTES (FEATURES DO SETOR)
+         Vocês têm total liberdade para estruturar esta área central conforme
+         os requisitos, fluxos e necessidades identificados nas entrevistas.
+         
+         REQUISITO: Utilize HTML5 semântico (section, article, div, ul, details).
+         Para criar estilos novos, edite o arquivo "css/custom.css".
+         ==================================================================== -->
+    <section id="features" class="sector-content-section" aria-labelledby="sector-content-heading">
+      <div class="container">
+        
+        <!-- Cabeçalho da Seção Central -->
+        <div class="sector-section-header">
+          <div class="sector-section-tag">
+            <span class="material-symbols-outlined" aria-hidden="true">help_center</span>
+            <span>Guia Prático e Procedimentos</span>
+          </div>
+          <h2 id="sector-content-heading" class="sector-section-title">
+            Como Podemos Ajudar Você Hoje?
+          </h2>
+          <p class="sector-section-subtitle">
+            Consulte as principais solicitações, prazos e canais de atendimento direto mapeados pela equipe discente.
+          </p>
+        </div>
+
+        <!-- EXEMPLO DE BLOCO 1: Grid de Tópicos / Serviços Frequentes -->
+        <div class="sector-grid">
+          <article class="sector-card">
+            <div class="sector-card-icon" aria-hidden="true">
+              <span class="material-symbols-outlined">assignment</span>
+            </div>
+            <h3 class="sector-card-title">Orientações e Normas</h3>
+            <p class="sector-card-text">
+              Consulte a regulamentação oficial, formulários obrigatórios e o passo a passo para abertura formal de chamados.
+            </p>
+            <a href="#fluxo" class="btn btn-outline-light" style="color: var(--color-primary-navy) !important; border-color: var(--color-border);">
+              Ver Passo a Passo
+            </a>
+          </article>
+
+          <article class="sector-card">
+            <div class="sector-card-icon" aria-hidden="true">
+              <span class="material-symbols-outlined">event_available</span>
+            </div>
+            <h3 class="sector-card-title">Prazos e Calendário</h3>
+            <p class="sector-card-text">
+              Fique atento às datas-limite para envio de requerimentos, renovações e homologação de documentos institucionais.
+            </p>
+            <a href="#prazos" class="btn btn-outline-light" style="color: var(--color-primary-navy) !important; border-color: var(--color-border);">
+              Consultar Datas
+            </a>
+          </article>
+
+          <article class="sector-card">
+            <div class="sector-card-icon" aria-hidden="true">
+              <span class="material-symbols-outlined">contact_phone</span>
+            </div>
+            <h3 class="sector-card-title">Canais de Atendimento</h3>
+            <p class="sector-card-text">
+              Localização física no campus, horários de funcionamento presencial, telefone, e-mail institucional e WhatsApp oficial.
+            </p>
+            <a href="#contato" class="btn btn-outline-light" style="color: var(--color-primary-navy) !important; border-color: var(--color-border);">
+              Ver Contatos
+            </a>
+          </article>
+        </div>
+
+        <!-- EXEMPLO DE BLOCO 2: Fluxo Passo a Passo -->
+        <div id="fluxo" style="margin-top: 3rem; background: var(--color-bg-card); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+          <h3 style="font-size: 1.35rem; color: var(--color-primary-navy); margin-bottom: 0.5rem;">
+            Passo a Passo do Processo Setorial
+          </h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Siga as etapas abaixo para protocolar ou resolver sua demanda com rapidez:
+          </p>
+
+          <ol class="process-steps-list">
+            <li class="process-step-item">
+              <span class="step-number">1</span>
+              <div class="step-content">
+                <strong>Reunir a Documentação Necessária</strong>
+                <p>Verifique com antecedência os comprovantes exigidos e tenha em mãos seu número de matrícula institucional.</p>
+              </div>
+            </li>
+            <li class="process-step-item">
+              <span class="step-number">2</span>
+              <div class="step-content">
+                <strong>Protocolar o Requerimento</strong>
+                <p>Abra o requerimento pelo portal acadêmico ou compareça presencialmente ao setor nos horários indicados.</p>
+              </div>
+            </li>
+            <li class="process-step-item">
+              <span class="step-number">3</span>
+              <div class="step-content">
+                <strong>Acompanhar o Parecer e Retirada</strong>
+                <p>Acompanhe o status do chamado e receba a confirmação ou retirada do documento protocolado.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- EXEMPLO DE BLOCO 3: Perguntas Frequentes (FAQ) -->
+        <div style="margin-top: 3rem;">
+          <h3 style="font-size: 1.35rem; color: var(--color-primary-navy); margin-bottom: 1rem;">
+            Dúvidas Frequentes do Setor
+          </h3>
+          <div class="faq-accordion">
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>Qual é o prazo médio de resposta para solicitações deste setor?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                O prazo de análise institucional varia entre 2 a 5 dias úteis, dependendo da complexidade do requerimento e do calendário acadêmico vigente.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>O atendimento presencial exige agendamento prévio?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                Para a maioria dos serviços o atendimento é por ordem de chegada na recepção do setor. Em períodos de pico de matrícula ou eventos especiais, recomenda-se verificar aviso oficial.
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- EXEMPLO DE BLOCO 4: Banner de Contato Oficial -->
+        <div id="contato" class="contact-banner">
+          <div class="contact-banner-meta">
+            <h3>Precisa de Atendimento com a Equipe do Setor?</h3>
+            <p>Atendimento presencial no campus FAMINAS • Segunda a Sexta: 08h às 21h</p>
+          </div>
+          <div class="contact-banner-actions">
+            <a href="mailto:atendimento@faminas.edu.br" class="btn btn-outline-light">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              <span>Enviar E-mail</span>
+            </a>
+            <a href="tel:+553237297000" class="btn btn-primary-highlight">
+              <span class="material-symbols-outlined" aria-hidden="true">call</span>
+              <span>Ligar para o Setor</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       RODAPÉ INSTITUCIONAL OFICIAL (RIGOROSAMENTE INALTERADO)
+       Preserva a identidade, créditos acadêmicos de ADS e modais legais.
+       ==================================================================== -->
+  <footer id="main-footer" class="site-footer">
+    <div class="footer-main">
+      <div class="footer-info">
+        <img src="./assets/images/logo-faminas.png" alt="FAMINAS" class="footer-logo" />
+        <p class="footer-text">
+          O <strong>InfoHub FAMINAS</strong> é uma iniciativa extensionista curricularizada desenvolvida pelos
+          acadêmicos do curso de <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> na disciplina de
+          <strong>Engenharia de Software</strong>, com foco no autoatendimento, clareza processual e usabilidade para
+          toda a comunidade universitária.
+        </p>
+
+        <div class="footer-course-highlight">
+          <a 
+            href="https://www.unifaminas.edu.br/cursos/analise-e-desenvolvimento-de-sistemas" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="footer-course-card"
+            id="link-curso-ads"
+            aria-label="Conheça o curso de Análise e Desenvolvimento de Sistemas na UNIFAMINAS em nova janela"
+          >
+            <div class="footer-course-icon" aria-hidden="true">
+              <span class="material-symbols-outlined">school</span>
+            </div>
+            <div class="footer-course-meta">
+              <span class="footer-course-label">Curso de Graduação</span>
+              <strong class="footer-course-title">Análise e Desenvolvimento de Sistemas</strong>
+            </div>
+            <span class="material-symbols-outlined footer-course-arrow" aria-hidden="true">open_in_new</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <span class="footer-links-title">Informações Institucionais</span>
+        <nav class="footer-nav" aria-label="Links institucionais e termos">
+          <button type="button" class="footer-link-btn" id="btn-modal-sobre" data-modal="sobre">
+            <span class="material-symbols-outlined" aria-hidden="true">info</span>
+            Sobre o Projeto
+          </button>
+          <button type="button" class="footer-link-btn" id="btn-modal-termos" data-modal="termos">
+            <span class="material-symbols-outlined" aria-hidden="true">gavel</span>
+            Termos de Uso
+          </button>
+          <button type="button" class="footer-link-btn" id="btn-modal-privacidade" data-modal="privacidade">
+            <span class="material-symbols-outlined" aria-hidden="true">security</span>
+            Política de Privacidade
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 FAMINAS — Faculdade de Minas. Todos os direitos reservados.</p>
+      <p>Desenvolvido com excelência técnica e padrões Web Standards.</p>
+    </div>
+  </footer>
+
+  <!-- Contêiner de Modais Sobrepostos -->
+  <div id="modals-root" aria-live="polite"></div>
+
+  <!-- Script de Inicialização da Aplicação -->
+  <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>

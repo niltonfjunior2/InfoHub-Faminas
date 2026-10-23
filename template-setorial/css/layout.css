@@ -1,0 +1,426 @@
+/* ==========================================================================
+   LAYOUT INSTITUCIONAL: HEADER, HERO & FOOTER - NÃO ALTERAR
+   Garante a identidade visual padrão do InfoHub FAMINAS.
+   ========================================================================== */
+
+/* ==========================================================================
+   HEADER INSTITUCIONAL
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 12px rgba(11, 27, 41, 0.06);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.5rem;
+  padding: 0 1.25rem;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 2.25rem;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 1.75rem;
+  background-color: var(--color-border);
+}
+
+.brand-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-title {
+  font-family: var(--font-family-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.brand-subtitle {
+  font-size: 0.72rem;
+  color: var(--color-primary-blue);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   HERO SECTION INSTITUCIONAL
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  background: radial-gradient(circle at 80% 20%, rgba(0, 163, 224, 0.15) 0%, transparent 60%),
+              linear-gradient(135deg, var(--color-primary-navy) 0%, #11283D 100%);
+  color: var(--color-text-inverse);
+  padding: 3.5rem 1.25rem 3rem;
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 450px;
+  height: 100%;
+  background-image: radial-gradient(rgba(0, 114, 206, 0.12) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 840px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 163, 224, 0.12);
+  color: var(--color-cyan-faminas);
+  border: 1px solid rgba(0, 163, 224, 0.3);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  color: var(--color-text-inverse);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.hero-title span {
+  color: var(--color-cyan-faminas);
+}
+
+.hero-description {
+  font-size: 1.05rem;
+  color: var(--color-text-inverse-muted);
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.hero-badges-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.hero-badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  color: #E2E8F0;
+  backdrop-filter: blur(4px);
+}
+
+.hero-badge-item .material-symbols-outlined {
+  color: var(--color-cyan-faminas);
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   SEÇÃO DO CONTEÚDO CENTRAL DO SETOR
+   ========================================================================== */
+.sector-content-section {
+  padding: 3.5rem 0 5rem;
+  background-color: var(--color-bg-page);
+}
+
+.sector-section-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3rem;
+}
+
+.sector-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-primary-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+}
+
+.sector-section-title {
+  font-size: 1.85rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 0.75rem;
+}
+
+.sector-section-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   FOOTER INSTITUCIONAL - RIGOROSAMENTE INALTERADO
+   ========================================================================== */
+.site-footer {
+  background-color: var(--color-primary-navy);
+  color: var(--color-text-inverse-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem 1.25rem 2rem;
+  margin-top: auto;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (min-width: 768px) {
+  .footer-main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.footer-info {
+  max-width: 650px;
+}
+
+.footer-logo {
+  height: 2.25rem;
+  width: auto;
+  margin-bottom: 1.25rem;
+  filter: brightness(0) invert(1);
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #94A3B8;
+  margin-bottom: 1.75rem;
+}
+
+.footer-text strong {
+  color: #F1F5F9;
+}
+
+/* Card em destaque para o curso de ADS */
+.footer-course-highlight {
+  margin-top: 0.5rem;
+}
+
+.footer-course-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 163, 224, 0.25);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-smooth);
+}
+
+.footer-course-card:hover {
+  background: rgba(0, 163, 224, 0.1);
+  border-color: var(--color-cyan-faminas);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 163, 224, 0.2);
+}
+
+.footer-course-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(0, 163, 224, 0.15);
+  border-radius: var(--radius-sm);
+  color: var(--color-cyan-faminas);
+}
+
+.footer-course-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-course-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-cyan-faminas);
+  font-weight: 600;
+}
+
+.footer-course-title {
+  font-family: var(--font-family-heading);
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.footer-course-arrow {
+  color: #94A3B8;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.footer-course-card:hover .footer-course-arrow {
+  transform: translateX(3px) translateY(-1px);
+  color: var(--color-cyan-faminas);
+}
+
+/* Grupo de Links Institucionais (Modais) */
+.footer-links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links-title {
+  font-family: var(--font-family-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link-btn {
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  font-family: var(--font-family-base);
+  font-size: 0.875rem;
+  text-align: left;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer-link-btn:hover {
+  color: var(--color-cyan-faminas);
+  transform: translateX(4px);
+}
+
+.footer-link-btn .material-symbols-outlined {
+  font-size: 1.05rem;
+  color: var(--color-cyan-faminas);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  max-width: var(--max-width);
+  margin: 1.75rem auto 0;
+  font-size: 0.8rem;
+  color: #64748B;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE GERAL
+   ========================================================================== */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+  }
+  .header-container {
+    height: 4rem;
+  }
+  .brand-logo {
+    height: 1.85rem;
+  }
+  .brand-title {
+    font-size: 0.85rem;
+  }
+  .brand-subtitle {
+    font-size: 0.65rem;
+  }
+  .btn-portal span:last-child {
+    display: none;
+  }
+}
