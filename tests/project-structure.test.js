@@ -38,7 +38,7 @@ describe('Validação da Estrutura e Catálogo do Projeto InfoHub FAMINAS', () =
     expect(titles).toContain('Iniciação Científica na FAMINAS');
     expect(titles).toContain('Matrícula e Renovação de Matrícula');
     expect(titles).toContain('Revista Científica da FAMINAS');
-    expect(titles).toContain('Apoio Psicopedagógico (NAP)');
+    expect(titles).toContain('Evento Experimente seu Futuro');
     expect(titles).toContain('Carteirinha Estudantil (1ª e 2ª via)');
     expect(titles).toContain('Trabalho de Conclusão de Curso (TCC)');
     expect(titles).toContain('Uso do Complexo Esportivo');

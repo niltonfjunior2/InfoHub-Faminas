@@ -117,11 +117,11 @@ export const SERVICES_DATA = [
     sectorGroup: 'Grupo 11'
   },
   {
-    id: 'apoio-psicopedagogico',
+    id: 'evento-experimente-seu-futuro',
     order: 12,
-    title: 'Apoio Psicopedagógico (NAP)',
-    description: 'Modalidades de acolhimento oferecidas, fluxo de agendamento sigiloso, canais de contato e atendimento especializado.',
-    icon: 'psychology',
+    title: 'Evento Experimente seu Futuro',
+    description: 'Guia de visitação ao campus, fluxo dos cursos superiores, mapas de laboratórios e testes interativos de afinidade para estudantes e visitantes.',
+    icon: 'explore',
     url: '',
     status: 'coming_soon',
     sectorGroup: 'Grupo 12'
