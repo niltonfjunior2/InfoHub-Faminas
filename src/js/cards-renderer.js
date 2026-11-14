@@ -17,7 +17,7 @@ function createCardElement(service) {
   card.setAttribute('data-id', service.id);
   card.setAttribute('tabindex', '0');
   card.setAttribute('role', 'button');
-  card.setAttribute('aria-label', `Setor ${service.order}: ${service.title}. ${service.status === 'active' ? 'Clique para acessar página em nova janela.' : 'Serviço em homologação. Clique para ver detalhes.'}`);
+  card.setAttribute('aria-label', `Setor ${service.order}: ${service.title}. ${service.status === 'active' ? 'Clique para acessar o guia do setor.' : 'Serviço em homologação. Clique para ver detalhes.'}`);
 
   const formattedOrder = String(service.order).padStart(2, '0');
   const isActive = service.status === 'active' && service.url && service.url.trim() !== '';
@@ -58,10 +58,10 @@ function createCardElement(service) {
     </div>
   `;
 
-  // Função de ativação do card
+  // Função de ativação do card (navegação na mesma janela)
   const handleCardActivation = () => {
     if (isActive) {
-      window.open(service.url, '_blank', 'noopener,noreferrer');
+      window.location.href = service.url;
     } else {
       openModal('unavailable', service);
     }
@@ -93,10 +93,14 @@ export function initCardsRenderer() {
 
   gridContainer.innerHTML = '';
 
-  SERVICES_DATA.forEach((service) => {
+  const sortedServices = [...SERVICES_DATA].sort((a, b) =>
+    a.title.localeCompare(b.title, 'pt-BR')
+  );
+
+  sortedServices.forEach((service) => {
     const cardElement = createCardElement(service);
     gridContainer.appendChild(cardElement);
   });
 
-  console.log(`[InfoHub FAMINAS] ${SERVICES_DATA.length} cards setoriais renderizados com sucesso.`);
+  console.log(`[InfoHub FAMINAS] ${sortedServices.length} cards setoriais renderizados com sucesso.`);
 }

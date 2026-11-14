@@ -43,4 +43,10 @@ describe('Validação da Estrutura e Catálogo do Projeto InfoHub FAMINAS', () =
     expect(titles).toContain('Trabalho de Conclusão de Curso (TCC)');
     expect(titles).toContain('Uso do Complexo Esportivo');
   });
+
+  it('os setores devem estar dispostos em ordem alfabética pelos títulos', () => {
+    const titles = SERVICES_DATA.map((s) => s.title);
+    const sortedTitles = [...titles].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+    expect(titles).toEqual(sortedTitles);
+  });
 });

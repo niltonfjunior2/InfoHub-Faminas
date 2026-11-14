@@ -46,10 +46,10 @@ describe('Sprint 02: Validação do Catálogo dos 15 Cards, Modais e Fallback', 
 
   it('ao clicar em um card em homologação, deve abrir o modal de aviso com opção de retorno', () => {
     initCardsRenderer();
-    const firstCard = document.querySelector('.service-card');
-    expect(firstCard).not.toBeNull();
+    const comingSoonCard = document.querySelector('.status-coming_soon')?.closest('.service-card');
+    expect(comingSoonCard).not.toBeNull();
 
-    firstCard?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    comingSoonCard?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
 
     const modalDialog = document.querySelector('.modal-dialog');
     expect(modalDialog).not.toBeNull();
@@ -63,6 +63,21 @@ describe('Sprint 02: Validação do Catálogo dos 15 Cards, Modais e Fallback', 
     // Ao clicar em retornar, fecha o modal
     returnBtn?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     expect(document.body.classList.contains('modal-open')).toBe(false);
+  });
+
+  it('ao clicar em um card ativo, deve redirecionar na mesma janela sem target="_blank"', () => {
+    initCardsRenderer();
+    const activeCard = document.querySelector('.status-active')?.closest('.service-card');
+    expect(activeCard).not.toBeNull();
+
+    const originalLocation = window.location;
+    delete window.location;
+    window.location = { href: '' };
+
+    activeCard?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    expect(window.location.href).toMatch(/^https?:\/\//);
+
+    window.location = originalLocation;
   });
 
   it('deve abrir e fechar os modais institucionais de Sobre, Termos e Privacidade', () => {
